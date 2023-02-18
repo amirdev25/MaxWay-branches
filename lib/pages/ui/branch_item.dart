@@ -12,6 +12,14 @@ class BranchItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Color(0x398b8b8b),
+            spreadRadius: 2.0,
+            blurRadius: 7.0,
+            offset: Offset(0, 0),
+          )
+        ],
         color: Colors.white,
         borderRadius: BorderRadius.all(
           Radius.circular(16.0),
@@ -24,7 +32,7 @@ class BranchItem extends StatelessWidget {
         bottom: 8.0,
       ),
       child: Container(
-        margin: EdgeInsets.all(8.0),
+        margin: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             Row(
@@ -46,7 +54,7 @@ class BranchItem extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8.0,
                       ),
                       Container(
