@@ -3,6 +3,7 @@ import 'package:maxway_branches/core/theme/app_colors.dart';
 import 'package:maxway_branches/core/utils/constants.dart';
 import 'package:maxway_branches/pages/main_page.dart';
 import 'package:maxway_branches/pages/main_provider.dart';
+import 'package:maxway_branches/pages/map_page.dart';
 import 'package:maxway_branches/pages/splash_page.dart';
 import 'package:provider/provider.dart';
 
@@ -26,6 +27,7 @@ class MaxWayApp extends StatelessWidget {
       initialRoute: Routes.SPALSH_PAGE,
       routes: {
         Routes.SPALSH_PAGE: (context) => SplashPage(),
+        Routes.MAP_PAGE: (context) => MapPage(),
         Routes.MAIN_PAGE: (context) {
           return ChangeNotifierProvider(
             create: (context) => MainProvider(),

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.maxway_branches">
    <application
-        android:label="maxway_branches"
+        android:label="Max Way Branches"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -30,5 +30,8 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-    </application>
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyBm0UHlNHZsiyq4Pkrv8CUD-6QLSpYwTdM"/>
+
+   </application>
 </manifest>

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maxway_branches/core/theme/app_colors.dart';
+import 'package:maxway_branches/core/utils/constants.dart';
 import 'package:maxway_branches/pages/ui/branch_item.dart';
 import 'package:maxway_branches/pages/ui/shimmer_item.dart';
 import 'package:provider/provider.dart';
@@ -47,7 +48,16 @@ class _MainPageState extends State<MainPage> {
               (context, index) {
                 return branches != null
                     ? BranchItem(
-                        () {},
+                        () {
+                          Navigator.pushNamed(
+                            context,
+                            Routes.MAP_PAGE,
+                            arguments: {
+                              'location': branches[index].location,
+                              'name': branches[index].name,
+                            },
+                          );
+                        },
                         branches[index],
                       )
                     : const ShimmerItem();
